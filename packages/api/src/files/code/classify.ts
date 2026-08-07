@@ -96,6 +96,8 @@ const UTF8_TEXT_EXTENSIONS = new Set<string>([
   // diagrams
   'mmd',
   'mermaid',
+  // game notations
+  'pgn',
 ]);
 
 const UTF8_TEXT_MIME_PREFIXES = ['text/'] as const;

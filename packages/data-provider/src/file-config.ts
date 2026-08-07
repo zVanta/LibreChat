@@ -92,6 +92,7 @@ export const fullMimeTypesList = [
   'audio/wma',
   'audio/opus',
   'audio/mpeg',
+  'application/x-chess-pgn',
   ...excelFileTypes,
 ];
 
@@ -196,6 +197,7 @@ const textualApplicationTypes = new Set([
   'application/typescript',
   'application/x-sh',
   'application/csv',
+  'application/x-chess-pgn',
 ]);
 
 /**
@@ -220,7 +222,7 @@ export const textMimeTypes =
   /^(text\/(x-c|x-csharp|tab-separated-values|x-c\+\+|x-h|x-java|html|markdown|x-php|x-python|x-script\.python|x-ruby|x-tex|plain|css|vtt|javascript|csv|xml|calendar))$/;
 
 export const applicationMimeTypes =
-  /^(application\/(epub\+zip|csv|json|msword|pdf|x-tar|x-sh|x-zip-compressed|typescript|sql|yaml|x-parquet|vnd\.apache\.parquet|vnd\.coffeescript|vnd\.openxmlformats-officedocument\.(wordprocessingml\.document|presentationml\.(presentation|template)|spreadsheetml\.sheet)|vnd\.oasis\.opendocument\.(text|spreadsheet|presentation|graphics)|xml|zip))$/;
+  /^(application\/(epub\+zip|csv|json|msword|pdf|x-tar|x-sh|x-zip-compressed|x-chess-pgn|typescript|sql|yaml|x-parquet|vnd\.apache\.parquet|vnd\.coffeescript|vnd\.openxmlformats-officedocument\.(wordprocessingml\.document|presentationml\.(presentation|template)|spreadsheetml\.sheet)|vnd\.oasis\.opendocument\.(text|spreadsheet|presentation|graphics)|xml|zip))$/;
 
 export const imageMimeTypes = /^image\/(jpeg|gif|png|webp|heic|heif)$/;
 
@@ -403,6 +405,7 @@ export const codeTypeMapping: { [key: string]: string } = {
   ical: 'text/calendar', // .ical - iCalendar
   ifb: 'text/calendar', // .ifb - iCalendar free/busy
   icalendar: 'text/calendar', // .icalendar - iCalendar
+  pgn: 'application/x-chess-pgn', // .pgn - Portable Game Notation (chess)
 };
 
 /** Maps image extensions to MIME types for formats browsers may not recognize */
@@ -714,6 +717,7 @@ const documentMimeExtensions: ReadonlyArray<readonly [string, readonly string[]]
   ['text/html', ['.html', '.htm']],
   ['text/calendar', ['.ics']],
   ['message/rfc822', ['.eml']],
+  ['application/x-chess-pgn', ['.pgn']],
 ];
 
 const documentMimeSet = new Set(documentMimeExtensions.map(([mimeType]) => mimeType));
