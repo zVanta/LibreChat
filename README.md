@@ -258,3 +258,14 @@ We thank [Locize](https://locize.com) for their translation management tools tha
     <img src="https://github.com/user-attachments/assets/d6b70894-6064-475e-bb65-92a9e23e0077" alt="Locize Logo" height="50">
   </a>
 </p>
+
+## Fork: PGN file upload support
+
+This fork extends LibreChat (https://github.com/danny-avila/LibreChat) with
+PGN (Portable Game Notation) file upload support.
+
+- .pgn chess game files are recognized and can be uploaded/attached and
+  ingested by agents (e.g. for chess game analysis).
+- Added pgn to MIME-type inference and UTF-8 text/code-artifact classification.
+- Added application/x-chess-pgn to the full MIME types list, allowed upload
+  MIME types, Anthropic textual content handling, and the file-picker accept list.
