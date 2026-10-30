@@ -13,8 +13,8 @@ const googleSearchJsonSchema = {
     max_results: {
       type: 'integer',
       minimum: 1,
-      maximum: 10,
-      description: 'The maximum number of search results to return. Defaults to 5.',
+      maximum: 15,
+      description: 'The maximum number of search results to return. Defaults to 10.',
     },
   },
   required: ['query'],
@@ -55,7 +55,7 @@ class GoogleSearchResults extends Tool {
   }
 
   async _call(input) {
-    const { query, max_results = 5 } = input;
+    const { query, max_results = 10 } = input;
 
     const response = await fetch(
       `https://www.googleapis.com/customsearch/v1?key=${this.apiKey}&cx=${

@@ -11,6 +11,8 @@ const TraversaalSearch = require('./structured/TraversaalSearch');
 const createOpenAIImageTools = require('./structured/OpenAIImageTools');
 const TavilySearchResults = require('./structured/TavilySearchResults');
 const createGeminiImageTool = require('./structured/GeminiImageGen');
+const ThreatIntelTool = require('./structured/ThreatIntel');
+const IntelTool = require('./structured/Intel');
 
 module.exports = {
   ...manifest,
@@ -25,4 +27,6 @@ module.exports = {
   TavilySearchResults,
   createOpenAIImageTools,
   createGeminiImageTool,
+  ThreatIntelTool,
+  IntelTool,
 };
